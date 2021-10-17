@@ -3,7 +3,7 @@ my_distance <- function(X, group, type = "euclidean") {
   group_name <- unique(group)
   ngroup <- length(group_name)
 
-  distance <- matrix(0, nrow = 5, ncol = 5)
+  distance <- matrix(0, nrow = ngroup, ncol = ngroup)
   cov_X <- cov(X)
   V <- diag(cov_X)
   p <- ncol(X)
